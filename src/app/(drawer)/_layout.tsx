@@ -5,6 +5,8 @@ import { View, Image, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { theme } from "../../../theme";
 import { DrawerItemList } from "@react-navigation/drawer";
+import { ConteinerHeader, ImageHeader, TextHeader } from "./home/styles";
+
 
 
 
@@ -47,8 +49,35 @@ export default function Layout() {
             <Drawer.Screen
                 name="profile"
                 options={{
-                    headerTitle: '',
+
+
+
                     drawerIcon: ({ color, size }) => <MaterialIcons name="pages" size={size} color={color} />
+                }}
+
+            />
+            <Drawer.Screen
+
+                name="home/index"
+
+                options={{
+                    drawerLabel: "Home",
+                    headerTitle: () => {
+                        return (
+                            <ConteinerHeader>
+                                <View style={{ justifyContent: "center", alignItems: "center" }}>
+                                    <TextHeader>Bem Vida</TextHeader>
+                                    <TextHeader> Mãe</TextHeader>
+                                </View>
+                                <ImageHeader source={require('../../../assets/gestante.jpg')} />
+                            </ConteinerHeader>
+                        )
+                    },
+                    headerStyle: {
+                        height: 100,
+                        backgroundColor: theme.color.white1,
+                    },
+                    drawerIcon: ({ color, size }) => <MaterialIcons name="home" size={size} color={color} />
                 }}
             />
         </Drawer>

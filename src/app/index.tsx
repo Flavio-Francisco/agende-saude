@@ -49,7 +49,7 @@ export default function Home() {
             </Link>
 
 
-            <Link href="../profile" asChild>
+            <Link href="../home" asChild>
                 <ButtomLogin >
                     <TextButton>Entrar</TextButton>
                 </ButtomLogin>
