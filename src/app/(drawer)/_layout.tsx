@@ -1,4 +1,4 @@
-import { Tabs, } from "expo-router";
+
 import { Drawer, } from "expo-router/drawer";
 import { MaterialIcons } from "@expo/vector-icons"
 import { View, Image, Text } from "react-native";

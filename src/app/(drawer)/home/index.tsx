@@ -12,28 +12,28 @@ export default function home() {
                 <TextHeaderHome>Escolha um Serviço</TextHeaderHome>
             </Header>
             <Body >
-                <Link href={'/profile'}>
+                <Link href={'/profile'} asChild>
                     < ButtomBody>
                         <Imagebody source={require('../../../../assets/icone-exames.webp')} />
                         <TextButton>Exames</TextButton>
                     </ButtomBody>
                 </Link>
 
-                <Link href={'/profile'}>
+                <Link href={'/(stack)/schedules'} asChild>
                     < ButtomBody>
                         <Imagebody source={require('../../../../assets/icone-consulta.jpg')} />
                         <TextButton>Consultas</TextButton>
                     </ButtomBody>
                 </Link>
 
-                <Link href={'/profile'}>
+                <Link href={'/profile'} asChild>
                     < ButtomBody>
                         <Imagebody source={require('../../../../assets/icone-unidade-de-saude.png')} />
                         <TextButton>Unidade de saúde</TextButton>
                     </ButtomBody>
                 </Link>
 
-                <Link href={'/profile'}>
+                <Link href={'/profile'} asChild>
                     < ButtomBody>
                         <Imagebody source={require('../../../../assets/icone-gestantes.jpg')} />
                         <TextButton>Evolução</TextButton>
