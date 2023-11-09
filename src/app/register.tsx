@@ -21,7 +21,7 @@ import {
 import { theme } from "../../theme";
 
 
-export default function Home() {
+export default function Register() {
 
     return (
         <Conteiner >
@@ -38,27 +38,17 @@ export default function Home() {
                 />
                 <TextLabel >Senha</TextLabel>
                 <Label
-                    placeholder="Digite Sua Senha"
+                    placeholder="Cadastre uma Senha"
                     placeholderTextColor={theme.color.white3}
                 />
             </ConteinerLogin>
-            <Link href="../setting" asChild>
-                <ConteinerText>
-                    <TextRight>Esqueci minha senha</TextRight>
-                </ConteinerText>
-            </Link>
 
 
-            <Link href="../home" asChild>
-                <ButtomLogin >
-                    <TextButton>Entrar</TextButton>
-                </ButtomLogin>
-            </Link>
-            <Link href="/register" asChild>
-                <Footer>
-                    <TextFooter>Quero me cadastrar</TextFooter>
-                </Footer>
-            </Link>
+            <ButtomLogin >
+                <TextButton>Cadastrar</TextButton>
+            </ButtomLogin>
+
+
         </Conteiner>
     )
 }

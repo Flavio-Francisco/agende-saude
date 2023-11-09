@@ -76,10 +76,25 @@ export default function Layout() {
 
             />
             <Drawer.Screen
-                name="setting"
+                name="setting/index"
                 options={{
                     drawerLabel: "Configurações",
-                    headerTitle: '',
+                    headerTitle: () => {
+                        return (
+                            <View style={{
+                                width: 315,
+                                flexDirection: "row",
+                                justifyContent: 'space-between',
+                                alignItems: "center"
+
+                            }}>
+                                <TextHeader style={{ fontSize: 22, marginLeft: 45 }}>Configurações</TextHeader>
+                                <ImageHeader
+                                    style={{}}
+                                    source={require('../../../assets/gestante.jpg')} />
+                            </View>
+                        )
+                    },
                     drawerIcon: ({ color, size }) => <MaterialIcons name="settings" size={size} color={color} />
                 }}
             />
