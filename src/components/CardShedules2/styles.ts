@@ -1,5 +1,5 @@
 import { styled } from "styled-components/native";
-import { theme } from "./../../../theme";
+import { theme } from "../../../theme";
 
 export const Conteiner = styled.View`
   width: 100%;
@@ -17,6 +17,13 @@ export const TextBold = styled.Text`
   font-size: 16px;
   font-weight: bold;
   font-family: ${theme.font.roboto};
+  color: ${theme.color.black1};
+`;
+export const Name = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  font-family: ${theme.font.roboto};
+  color: ${theme.color.blue2};
 `;
 export const Text1 = styled.Text`
   font-size: 16px;

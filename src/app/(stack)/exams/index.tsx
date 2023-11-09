@@ -5,54 +5,54 @@ import { FlatList, RefreshControl } from 'react-native';
 import { theme } from "../../../../theme";
 import HeaderStack from '../../../components/HeaderStack';
 import { MaterialIcons } from "@expo/vector-icons"
-import { CardShedules2 } from '../../../components/CardShedules2';
+import { CardShedules } from '../../../components/CardShedules';
 
 
 
-export default function Schedules() {
+export default function Exams() {
     const [refreshing, setRefreshing] = useState(false);
     const FakeData = [
         {
             id: "1",
-            name: "Dr Meire Lúcia",
+            exame: "USG",
             horario: "12:00",
             local: "Salgado",
-            consulta: "agendado"
+            status: "agendado"
         },
         {
             id: "2",
-            name: "Dr Meire Lúcia",
+            exame: "sangue",
             horario: "14:00",
             local: "caruaru",
-            consulta: "agendado"
+            status: "falta"
         },
         {
             id: "3",
-            name: "Dr Meire Lúcia",
+            exame: "ferro",
             horario: "17:00",
             local: "santa cruz",
-            consulta: "agendado"
+            status: "realizado"
         },
         {
             id: "4",
-            name: "Dr Meire Lúcia",
+            exame: "USG",
             horario: "12:00",
             local: "Salgado",
-            consulta: "agendado"
+            status: "agendado"
         },
         {
             id: "5",
-            name: "Dr Meire Lúcia",
+            exame: "sangue",
             horario: "14:00",
             local: "caruaru",
-            consulta: "agendado"
+            status: "falta"
         },
         {
             id: "6",
-            name: "Dr Meire Lúcia",
+            exame: "ferro",
             horario: "17:00",
             local: "santa cruz",
-            consulta: "agendado"
+            status: "realizado"
         },
     ]
     const onRefresh = () => {
@@ -76,7 +76,7 @@ export default function Schedules() {
                         fontWeight: 'bold',
                     },
 
-                    headerTitle: () => <HeaderStack href={'../(drawer)/home'} text='Agendamentos' />
+                    headerTitle: () => <HeaderStack href={'../(drawer)/home'} text='Exames' />
                 }}
             />
             <ConteinerHeader >
@@ -96,7 +96,7 @@ export default function Schedules() {
                     }
                     data={FakeData}
                     keyExtractor={item => item.id}
-                    renderItem={({ item }) => <CardShedules2 name={item.name} horario={item.horario} consulta={item.consulta} local={item.local} />}
+                    renderItem={({ item }) => <CardShedules exame={item.exame} horario={item.horario} local={item.local} status={item.status} />}
                 />
             </Body>
 

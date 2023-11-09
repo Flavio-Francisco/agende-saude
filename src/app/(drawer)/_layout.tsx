@@ -1,6 +1,7 @@
 
 import { Drawer, } from "expo-router/drawer";
 import { MaterialIcons } from "@expo/vector-icons"
+import { EvilIcons } from '@expo/vector-icons';
 import { View, Image, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { theme } from "../../../theme";
@@ -38,24 +39,6 @@ export default function Layout() {
                 )
             }}
         >
-
-            <Drawer.Screen
-                name="setting"
-                options={{
-                    headerTitle: '',
-                    drawerIcon: ({ color, size }) => <MaterialIcons name="settings" size={size} color={color} />
-                }}
-            />
-            <Drawer.Screen
-                name="profile"
-                options={{
-
-
-
-                    drawerIcon: ({ color, size }) => <MaterialIcons name="pages" size={size} color={color} />
-                }}
-
-            />
             <Drawer.Screen
 
                 name="home/index"
@@ -80,6 +63,27 @@ export default function Layout() {
                     drawerIcon: ({ color, size }) => <MaterialIcons name="home" size={size} color={color} />
                 }}
             />
+
+
+            <Drawer.Screen
+                name="profile"
+                options={{
+                    drawerLabel: "Pefil",
+
+
+                    drawerIcon: ({ color, size }) => <EvilIcons name="user" size={size} color={color} />
+                }}
+
+            />
+            <Drawer.Screen
+                name="setting"
+                options={{
+                    drawerLabel: "Configurações",
+                    headerTitle: '',
+                    drawerIcon: ({ color, size }) => <MaterialIcons name="settings" size={size} color={color} />
+                }}
+            />
+
         </Drawer>
     )
 }

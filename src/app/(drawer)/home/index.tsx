@@ -11,30 +11,30 @@ export default function home() {
             < Header>
                 <TextHeaderHome>Escolha um Serviço</TextHeaderHome>
             </Header>
-            <Body >
-                <Link href={'/profile'} asChild>
-                    < ButtomBody>
+            <Body style={{ elevation: 10 }}>
+                <Link href={'/(stack)/exams'} asChild>
+                    < ButtomBody style={{ elevation: 10 }}>
                         <Imagebody source={require('../../../../assets/icone-exames.webp')} />
                         <TextButton>Exames</TextButton>
                     </ButtomBody>
                 </Link>
 
                 <Link href={'/(stack)/schedules'} asChild>
-                    < ButtomBody>
+                    < ButtomBody style={{ elevation: 10 }}>
                         <Imagebody source={require('../../../../assets/icone-consulta.jpg')} />
                         <TextButton>Consultas</TextButton>
                     </ButtomBody>
                 </Link>
 
-                <Link href={'/profile'} asChild>
-                    < ButtomBody>
+                <Link href={'/(stack)/ubs'} asChild>
+                    < ButtomBody style={{ elevation: 10 }}>
                         <Imagebody source={require('../../../../assets/icone-unidade-de-saude.png')} />
                         <TextButton>Unidade de saúde</TextButton>
                     </ButtomBody>
                 </Link>
 
-                <Link href={'/profile'} asChild>
-                    < ButtomBody>
+                <Link href={'/(stack)/evolution'} asChild>
+                    < ButtomBody style={{ elevation: 10 }}>
                         <Imagebody source={require('../../../../assets/icone-gestantes.jpg')} />
                         <TextButton>Evolução</TextButton>
                     </ButtomBody>

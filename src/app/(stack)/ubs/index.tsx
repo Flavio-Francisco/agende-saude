@@ -5,54 +5,60 @@ import { FlatList, RefreshControl } from 'react-native';
 import { theme } from "../../../../theme";
 import HeaderStack from '../../../components/HeaderStack';
 import { MaterialIcons } from "@expo/vector-icons"
-import { CardShedules2 } from '../../../components/CardShedules2';
+import { CardShedules3 } from '../../../components/CardShedules3';
 
 
 
-export default function Schedules() {
+export default function Ubs() {
     const [refreshing, setRefreshing] = useState(false);
     const FakeData = [
         {
             id: "1",
-            name: "Dr Meire Lúcia",
-            horario: "12:00",
-            local: "Salgado",
-            consulta: "agendado"
+            name: "Ubs do Salgado",
+            endereço: "rua Justino Francisco da Silva",
+            numero: "72",
+            barrio: "52",
+            fone: "37214545"
         },
         {
             id: "2",
-            name: "Dr Meire Lúcia",
-            horario: "14:00",
-            local: "caruaru",
-            consulta: "agendado"
+            name: "Ubs do Salgado",
+            endereço: "rua Justino Francisco da Silva",
+            numero: "72",
+            barrio: "52",
+            fone: "37214545"
         },
         {
             id: "3",
-            name: "Dr Meire Lúcia",
-            horario: "17:00",
-            local: "santa cruz",
-            consulta: "agendado"
+            name: "Ubs do Salgado",
+            endereço: "rua Justino Francisco da Silva",
+            numero: "72",
+            barrio: "52",
+            fone: "37214545"
         },
         {
             id: "4",
-            name: "Dr Meire Lúcia",
-            horario: "12:00",
-            local: "Salgado",
-            consulta: "agendado"
+            name: "Ubs do Salgado",
+            endereço: "rua Justino Francisco da Silva",
+            numero: "72",
+            barrio: "52",
+            fone: "37214545"
         },
         {
             id: "5",
-            name: "Dr Meire Lúcia",
-            horario: "14:00",
-            local: "caruaru",
-            consulta: "agendado"
+            name: "Ubs do Salgado",
+            endereço: "rua Justino Francisco da Silva",
+            numero: "72",
+            barrio: "52",
+            fone: "37214545"
         },
         {
             id: "6",
-            name: "Dr Meire Lúcia",
-            horario: "17:00",
-            local: "santa cruz",
-            consulta: "agendado"
+            name: "Ubs do Salgado",
+            endereço: "rua Justino Francisco da Silva",
+            numero: "72",
+            barrio: "52",
+            fone: "37214545"
         },
     ]
     const onRefresh = () => {
@@ -76,7 +82,7 @@ export default function Schedules() {
                         fontWeight: 'bold',
                     },
 
-                    headerTitle: () => <HeaderStack href={'../(drawer)/home'} text='Agendamentos' />
+                    headerTitle: () => <HeaderStack href={'../(drawer)/home'} text='UBS' />
                 }}
             />
             <ConteinerHeader >
@@ -96,7 +102,7 @@ export default function Schedules() {
                     }
                     data={FakeData}
                     keyExtractor={item => item.id}
-                    renderItem={({ item }) => <CardShedules2 name={item.name} horario={item.horario} consulta={item.consulta} local={item.local} />}
+                    renderItem={({ item }) => <CardShedules3 name={item.name} endereço={item.endereço} numero={item.numero} barrio={item.barrio} fone={item.fone} />}
                 />
             </Body>
 

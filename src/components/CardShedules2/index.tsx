@@ -1,32 +1,32 @@
-import { Conteiner, Text1, TextBold, ViewText } from "./styles";
+import { Conteiner, Name, Text1, TextBold, ViewText } from "./styles";
 
 interface Props {
-    exame: string;
+    name: string;
     horario: string;
     local: string;
-    status: string;
+    consulta: string;
+
 
 }
 
 
-export function CardShedules(props: Props) {
+export function CardShedules2(props: Props) {
     return (
         <Conteiner style={{ elevation: 7 }} >
             <ViewText>
-                <TextBold>Exame: </TextBold>
-                <Text1>{props.exame}</Text1>
+                <Name>{props.name}</Name>
             </ViewText>
             <ViewText>
                 <TextBold>Horário : </TextBold>
                 <Text1>{props.horario}</Text1>
             </ViewText>
             <ViewText>
-                <TextBold>Local : </TextBold>
-                <Text1>{props.local}</Text1>
+                <TextBold>Consulta : </TextBold>
+                <Text1>{props.consulta}</Text1>
             </ViewText>
             <ViewText>
-                <TextBold>Status : </TextBold>
-                <Text1>{props.status}</Text1>
+                <TextBold>Local : </TextBold>
+                <Text1>{props.local}</Text1>
             </ViewText>
 
         </Conteiner>
